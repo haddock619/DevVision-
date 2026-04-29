@@ -118,14 +118,44 @@
             section { padding: 20px; }
             .card { margin: 10px; }
         }
+        .hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: radial-gradient(circle, #1e293b, #0f172a);
+}
+
+.hero p {
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #38bdf8;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0ea5e9;
+    transform: scale(1.05);
+}
+        html {
+    scroll-behavior: smooth;
+}
     </style>
 </head>
 
 <body>
 
-<header>
+<header class="hero">
     <h1>DevVision</h1>
-    <p>Découvre le métier de développeur informatique</p>
+    <p>Développeur web en apprentissage • HTML • CSS • JavaScript</p>
+    <a href="#projets" class="btn">Voir mes projets</a>
 </header>
 
 <nav>
@@ -159,12 +189,10 @@
 <section id="competences">
     <div class="card">
         <h2>🛠️ Compétences</h2>
-        <ul>
-            <li>Programmation (HTML, CSS, JavaScript...)</li>
-            <li>Logique et résolution de problèmes</li>
-            <li>Travail en équipe</li>
-            <li>Apprentissage continu</li>
-        </ul>
+
+        <p><strong>Langages :</strong> HTML, CSS, JavaScript</p>
+        <p><strong>Niveau :</strong> Débutant avancé</p>
+        <p><strong>Objectif :</strong> Devenir développeur full-stack</p>
     </div>
 </section>
 
@@ -172,11 +200,12 @@
 <section id="projets">
     <div class="card">
         <h2>🚀 Projets</h2>
-        <ul>
-            <li>Site DevVision (actuel)</li>
-            <li>Mini portfolio HTML/CSS</li>
-            <li>Projets JavaScript à venir</li>
-        </ul>
+
+        <div>
+            <p>✔ DevVision (site éducatif)</p>
+            <p>✔ Mini portfolio personnel</p>
+            <p>⏳ Application JavaScript en cours</p>
+        </div>
     </div>
 </section>
 
@@ -211,18 +240,22 @@
 </section>
 
 <!-- QUIZ -->
-<section id="quiz">
-    <div class="card">
-        <h2>🧠 Quiz : Es-tu fait pour être développeur ?</h2>
+let score = 0;
 
-        <p><strong>Aimes-tu résoudre des problèmes ?</strong></p>
+function reponse(choix) {
+    if (choix === "oui") score++;
 
-        <button onclick="reponse('oui')">Oui</button>
-        <button onclick="reponse('non')">Non</button>
+    let resultat = document.getElementById("resultat");
+    let pourcentage = Math.round((score / 1) * 100);
 
-        <p id="resultat"></p>
-    </div>
-</section>
+    if (score === 1) {
+        resultat.innerText = "🔥 Excellent profil développeur (" + pourcentage + "%)";
+    } else {
+        resultat.innerText = "💡 Tu peux progresser avec de la pratique (" + pourcentage + "%)";
+    }
+
+    score = 0;
+}
 
 <footer>
     <p>© 2026 DevVision</p>
