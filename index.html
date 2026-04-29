@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>DevVision - Métier de développeur</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -10,10 +11,7 @@
             background: #0f172a;
             color: white;
         }
-.card:hover {
-    transform: scale(1.05);
-    transition: 0.3s;
-}
+
         header {
             background: #1e293b;
             padding: 20px;
@@ -46,6 +44,11 @@
             padding: 20px;
             margin: 20px 0;
             border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
         }
 
         button {
@@ -56,12 +59,7 @@
             cursor: pointer;
             border-radius: 5px;
         }
-<section id="apropos">
-    <div class="card">
-        <h2>👤 À propos</h2>
-        <p>DevVision est un projet éducatif conçu pour aider les débutants à comprendre le métier de développeur informatique et découvrir les opportunités du numérique.</p>
-    </div>
-</section>
+
         footer {
             text-align: center;
             padding: 20px;
@@ -69,6 +67,7 @@
         }
     </style>
 </head>
+
 <body>
 
 <header>
@@ -80,9 +79,10 @@
     <a href="#metier">Métier</a>
     <a href="#competences">Compétences</a>
     <a href="#ia">IA</a>
+    <a href="#apropos">À propos</a>
+    <a href="#contact">Contact</a>
 </nav>
-<a href="#apropos">À propos</a>
-<a href="#contact">Contact</a>
+
 <section id="metier">
     <div class="card">
         <h2>💻 Le métier</h2>
@@ -111,15 +111,24 @@
         <p id="message"></p>
     </div>
 </section>
-<id id="cidtact">
+
+<section id="apropos">
+    <div class="card">
+        <h2>👤 À propos</h2>
+        <p>DevVision est un projet éducatif conçu pour aider les débutants à comprendre le métier de développeur informatique et découvrir les opportunités du numérique.</p>
+    </div>
+</section>
+
+<section id="contact">
     <div class="card">
         <h2>📩 Contact</h2>
         <input type="text" placeholder="Ton nom"><br><br>
         <input type="email" placeholder="Ton email"><br><br>
         <textarea placeholder="Ton message"></textarea><br><br>
-        <button>EnvoyEnvoyerton>
+        <button>Envoyer</button>
     </div>
 </section>
+
 <footer>
     <p>© 2026 DevVision</p>
 </footer>
