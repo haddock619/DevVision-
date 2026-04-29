@@ -156,6 +156,7 @@ button:hover {
     <a href="#ia">IA</a>
     <a href="#apropos">À propos</a>
     <a href="#contact">Contact</a>
+    <a href="#quiz">Quiz</a>
 </nav>
 
 <section id="metier">
@@ -213,7 +214,20 @@ button:hover {
         <button>Envoyer</button>
     </div>
 </section>
+<section id="quiz">
+    <div class="card">
+        <h2>🧠 Quiz : Es-tu fait pour être développeur ?</h2>
 
+        <p>Réponds à cette question :</p>
+
+        <p><strong>Aimes-tu résoudre des problèmes ?</strong></p>
+
+        <button onclick="reponse('oui')">Oui</button>
+        <button onclick="reponse('non')">Non</button>
+
+        <p id="resultat"></p>
+    </div>
+</section>
 <footer>
     <p>© 2026 DevVision</p>
 </footer>
@@ -223,6 +237,22 @@ function showMessage() {
     document.getElementById("message").innerText =
         "Conseil : Apprends JavaScript, c’est essentiel pour devenir développeur !";
 }
+ <script>
+function showMessage() {
+    document.getElementById("message").innerText =
+        "Conseil : Apprends JavaScript, c’est essentiel pour devenir développeur !";
+}
+
+function reponse(choix) {
+    let resultat = document.getElementById("resultat");
+
+    if (choix === "oui") {
+        resultat.innerText = "🔥 Excellent ! Tu as un bon profil pour devenir développeur.";
+    } else {
+        resultat.innerText = "💡 Pas grave ! La logique s’apprend avec la pratique.";
+    }
+}
+</script>   
 </script>
 
 </body>
