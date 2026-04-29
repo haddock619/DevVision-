@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>DevVision - Métier de développeur</title>
 
@@ -15,13 +16,7 @@ body {
     font-size: 18px;
     line-height: 1.6;
 }
-        header {
-            background: #1e293b;
-            padding: 20px;
-            text-align: center;
-        }
-
-        h1 {
+       h1 {
     font-size: 40px;
 }
 
@@ -30,7 +25,13 @@ h2 {
 }
 p, li, input, textarea {
     font-size: 18px;
-}
+} 
+        header {
+            background: #1e293b;
+            padding: 20px;
+            text-align: center;
+        }
+        
         nav {
             background: #020617;
             padding: 10px;
@@ -42,7 +43,11 @@ p, li, input, textarea {
             margin: 10px;
             text-decoration: none;
         }
-
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
         section {
             padding: 40px;
         }
