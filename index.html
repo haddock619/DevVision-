@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>DevVision - Métier de développeur</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #0f172a;
+            color: white;
+        }
+
+        header {
+            background: #1e293b;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            color: #38bdf8;
+        }
+
+        nav {
+            background: #020617;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 40px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #38bdf8;
+            border: none;
+            color: black;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #020617;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>DevVision</h1>
+    <p>Découvre le métier de développeur informatique</p>
+</header>
+
+<nav>
+    <a href="#metier">Métier</a>
+    <a href="#competences">Compétences</a>
+    <a href="#ia">IA</a>
+</nav>
+
+<section id="metier">
+    <div class="card">
+        <h2>💻 Le métier</h2>
+        <p>Un développeur crée des sites, applications et logiciels en utilisant du code. Il analyse les besoins, programme, teste et améliore les solutions.</p>
+    </div>
+</section>
+
+<section id="competences">
+    <div class="card">
+        <h2>🛠️ Compétences</h2>
+        <ul>
+            <li>Programmation (HTML, CSS, JavaScript...)</li>
+            <li>Logique et résolution de problèmes</li>
+            <li>Travail en équipe</li>
+            <li>Apprentissage continu</li>
+        </ul>
+    </div>
+</section>
+
+<section id="ia">
+    <div class="card">
+        <h2>🤖 Intelligence Artificielle</h2>
+        <p>L’IA aide les développeurs à coder plus vite, mais ils restent indispensables pour vérifier et concevoir les solutions.</p>
+
+        <button onclick="showMessage()">Clique pour voir un conseil</button>
+        <p id="message"></p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 DevVision</p>
+</footer>
+
+<script>
+function showMessage() {
+    document.getElementById("message").innerText =
+        "Conseil : Apprends JavaScript, c’est essentiel pour devenir développeur !";
+}
+</script>
+
+</body>
+</html>
