@@ -104,12 +104,12 @@
 
 <body>
 
-<header>
+<header class="hero">
     <h1>DevVision</h1>
-    <p>Développeur Web | HTML • CSS • JavaScript</p>
-    <a class="btn" href="#projets">Voir les projets</a>
+    <p>Plateforme d’apprentissage du développement web</p>
+    <p><strong>HTML • CSS • JavaScript • Logique</strong></p>
+    <a class="btn" href="#projets">Explorer les projets</a>
 </header>
-
 <nav>
     <a href="#profil">Profil</a>
     <a href="#metier">Métier</a>
@@ -152,12 +152,22 @@
 
 <section id="quiz">
     <div class="card">
-        <h2>🧠 Quiz Recrutement</h2>
+        <h2>🧠 Test de profil développeur</h2>
 
-        <p><strong>Aimes-tu résoudre des problèmes complexes ?</strong></p>
+        <p>Question 1 : Aimes-tu résoudre des problèmes ?</p>
+        <button onclick="score(1)">Oui</button>
+        <button onclick="score(0)">Non</button>
 
-        <button onclick="reponse('oui')">Oui</button>
-        <button onclick="reponse('non')">Non</button>
+        <p>Question 2 : Aimes-tu apprendre de nouvelles technologies ?</p>
+        <button onclick="score(1)">Oui</button>
+        <button onclick="score(0)">Non</button>
+
+        <p>Question 3 : Aimes-tu créer des projets ?</p>
+        <button onclick="score(1)">Oui</button>
+        <button onclick="score(0)">Non</button>
+
+        <br><br>
+        <button onclick="resultat()">Voir mon résultat</button>
 
         <p id="resultat"></p>
     </div>
@@ -178,14 +188,30 @@
 </footer>
 
 <script>
-function reponse(choix) {
-    let resultat = document.getElementById("resultat");
+let points = 0;
 
-    if (choix === "oui") {
-        resultat.innerText = "🔥 Profil compatible avec le développement logiciel.";
+function showMessage() {
+    document.getElementById("message").innerText =
+        "Conseil : Apprends JavaScript pour devenir développeur professionnel !";
+}
+
+function score(valeur) {
+    points += valeur;
+}
+
+function resultat() {
+    let r = document.getElementById("resultat");
+    let percent = (points / 3) * 100;
+
+    if (percent === 100) {
+        r.innerText = "🔥 Excellent profil développeur (" + percent + "%)";
+    } else if (percent >= 50) {
+        r.innerText = "👍 Bon potentiel développeur (" + percent + "%)";
     } else {
-        resultat.innerText = "💡 Compétences à développer, mais potentiel présent.";
+        r.innerText = "💡 À développer, mais tu peux progresser (" + percent + "%)";
     }
+
+    points = 0;
 }
 </script>
 
