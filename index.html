@@ -1,219 +1,211 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <title>DevVision - Portfolio Développeur</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevVision - Portfolio Développeur</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: white;
-            font-size: 18px;
-            line-height: 1.7;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    scroll-behavior: smooth;
+}
 
-        h1 { font-size: 44px; }
-        h2 { font-size: 30px; }
+/* HEADER */
+header {
+    text-align: center;
+    padding: 100px 20px;
+    background: radial-gradient(circle, #1e293b, #0f172a);
+}
 
-        header {
-            text-align: center;
-            padding: 90px 20px;
-            background: radial-gradient(circle, #1e293b, #0f172a);
-        }
+header h1 {
+    font-size: 50px;
+}
 
-        nav {
-            background: rgba(2, 6, 23, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 12px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+header p {
+    opacity: 0.8;
+}
 
-        nav a {
-            color: white;
-            margin: 12px;
-            text-decoration: none;
-        }
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #38bdf8;
+    color: black;
+    border-radius: 8px;
+    text-decoration: none;
+}
 
-        section {
-            padding: 50px 20px;
-        }
+/* NAV */
+nav {
+    position: sticky;
+    top: 0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    text-align: center;
+}
 
-        .card {
-            background: rgba(30, 41, 59, 0.85);
-            backdrop-filter: blur(12px);
-            padding: 25px;
-            margin: 20px auto;
-            max-width: 900px;
-            border-radius: 16px;
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
-            transition: 0.3s;
-        }
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
 
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
-        }
+/* SECTIONS */
+section {
+    padding: 60px 20px;
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 24px;
-            background: #38bdf8;
-            color: black;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: 0.3s;
-            font-weight: bold;
-        }
+.card {
+    max-width: 900px;
+    margin: auto;
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(56,189,248,0.2);
+}
 
-        .btn:hover {
-            background: #0ea5e9;
-            transform: scale(1.05);
-        }
+/* SERVICES */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 15px;
+}
 
-        button {
-            padding: 10px 18px;
-            margin: 5px;
-            background: #38bdf8;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-        }
+/* SOCIAL */
+.social a {
+    margin: 10px;
+    color: #38bdf8;
+}
 
-        button:hover {
-            background: #0ea5e9;
-        }
+/* COOKIE */
+#cookie {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #111827;
+    padding: 15px;
+    text-align: center;
+}
 
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #020617;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+}
+</style>
 </head>
 
 <body>
 
-<header class="hero">
-    <h1>DevVision</h1>
-    <p>Plateforme d’apprentissage du développement web</p>
-    <p><strong>HTML • CSS • JavaScript • Logique</strong></p>
-    <a class="btn" href="#projets">Explorer les projets</a>
+<!-- HEADER -->
+<header>
+<h1>DevVision</h1>
+<p>Développeur Web • HTML • CSS • JavaScript</p>
+<a class="btn" href="#projects">Voir mes projets</a>
 </header>
+
+<!-- NAV -->
 <nav>
-    <a href="#profil">Profil</a>
-    <a href="#metier">Métier</a>
-    <a href="#competences">Compétences</a>
-    <a href="#projets">Projets</a>
-    <a href="#quiz">Quiz</a>
-    <a href="#contact">Contact</a>
+<a href="#about">À propos</a>
+<a href="#services">Services</a>
+<a href="#skills">Compétences</a>
+<a href="#projects">Projets</a>
+<a href="#gallery">Galerie</a>
+<a href="#certif">Certificat</a>
+<a href="#contact">Contact</a>
 </nav>
 
-<section id="profil">
-    <div class="card">
-        <h2>👨‍💻 Profil</h2>
-        <p>Développeur web en apprentissage, passionné par la création d’interfaces modernes et interactives. Objectif : devenir développeur full-stack professionnel.</p>
-    </div>
+<!-- ABOUT -->
+<section id="about">
+<div class="card">
+<h2>🚀 À propos</h2>
+<p>DevVision est un portfolio professionnel démontrant des compétences en développement web et création d’interfaces modernes.</p>
+</div>
 </section>
 
-<section id="metier">
-    <div class="card">
-        <h2>💻 Métier</h2>
-        <p>Un développeur conçoit, développe et améliore des applications web et logiciels. Il transforme des besoins en solutions numériques fonctionnelles.</p>
-    </div>
+<!-- SERVICES -->
+<section id="services">
+<div class="card">
+<h2>💼 Services</h2>
+<div class="grid">
+<div>Sites Web modernes</div>
+<div>Applications JavaScript</div>
+<div>UI/UX Design</div>
+</div>
+</div>
 </section>
 
-<section id="competences">
-    <div class="card">
-        <h2>🛠️ Compétences</h2>
-        <p>HTML • CSS • JavaScript</p>
-        <p>Logique • Résolution de problèmes • Créativité</p>
-    </div>
+<!-- SKILLS -->
+<section id="skills">
+<div class="card">
+<h2>🛠️ Compétences</h2>
+<p>HTML • CSS • JavaScript • Responsive Design • GitHub</p>
+</div>
 </section>
 
-<section id="projets">
-    <div class="card">
-        <h2>🚀 Projets</h2>
-        <p>✔ DevVision (site actuel)</p>
-        <p>✔ Portfolio personnel</p>
-        <p>⏳ Application JavaScript en développement</p>
-    </div>
+<!-- PROJECTS -->
+<section id="projects">
+<div class="card">
+<h2>🚀 Projets</h2>
+<p>✔ DevVision</p>
+<p>✔ Portfolio personnel</p>
+<p>✔ Applications web en cours</p>
+</div>
 </section>
 
-<section id="quiz">
-    <div class="card">
-        <h2>🧠 Test de profil développeur</h2>
-
-        <p>Question 1 : Aimes-tu résoudre des problèmes ?</p>
-        <button onclick="score(1)">Oui</button>
-        <button onclick="score(0)">Non</button>
-
-        <p>Question 2 : Aimes-tu apprendre de nouvelles technologies ?</p>
-        <button onclick="score(1)">Oui</button>
-        <button onclick="score(0)">Non</button>
-
-        <p>Question 3 : Aimes-tu créer des projets ?</p>
-        <button onclick="score(1)">Oui</button>
-        <button onclick="score(0)">Non</button>
-
-        <br><br>
-        <button onclick="resultat()">Voir mon résultat</button>
-
-        <p id="resultat"></p>
-    </div>
+<!-- GALLERY -->
+<section id="gallery">
+<div class="card">
+<h2>🖼️ Galerie</h2>
+<p>📷 Image projet 1</p>
+<p>📷 Image projet 2</p>
+<p>📷 Image projet 3</p>
+</div>
 </section>
 
+<!-- CERTIFICAT -->
+<section id="certif">
+<div class="card">
+<h2>🏆 Certificat</h2>
+<p>Certificat de développeur web en cours d’obtention.</p>
+<p>CV disponible sur demande.</p>
+</div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
-    <div class="card">
-        <h2>📩 Contact</h2>
-        <input type="text" placeholder="Nom">
-        <input type="email" placeholder="Email">
-        <textarea placeholder="Message"></textarea>
-        <button>Envoyer</button>
-    </div>
+<div class="card">
+<h2>📩 Contact</h2>
+<input type="text" placeholder="Nom">
+<input type="email" placeholder="Email">
+<textarea placeholder="Message"></textarea>
+<button>Envoyer</button>
+
+<div class="social">
+<h3>Réseaux sociaux</h3>
+<a href="#">GitHub</a>
+<a href="#">LinkedIn</a>
+<a href="#">Instagram</a>
+</div>
+</div>
 </section>
 
+<!-- COOKIE -->
+<div id="cookie">
+Ce site utilise des cookies 🍪
+<button onclick="document.getElementById('cookie').style.display='none'">OK</button>
+</div>
+
+<!-- FOOTER -->
 <footer>
-    <p>© 2026 DevVision - Portfolio Développeur</p>
+© 2026 DevVision - Tous droits réservés
 </footer>
-
-<script>
-let points = 0;
-
-function showMessage() {
-    document.getElementById("message").innerText =
-        "Conseil : Apprends JavaScript pour devenir développeur professionnel !";
-}
-
-function score(valeur) {
-    points += valeur;
-}
-
-function resultat() {
-    let r = document.getElementById("resultat");
-    let percent = (points / 3) * 100;
-
-    if (percent === 100) {
-        r.innerText = "🔥 Excellent profil développeur (" + percent + "%)";
-    } else if (percent >= 50) {
-        r.innerText = "👍 Bon potentiel développeur (" + percent + "%)";
-    } else {
-        r.innerText = "💡 À développer, mais tu peux progresser (" + percent + "%)";
-    }
-
-    points = 0;
-}
-</script>
 
 </body>
 </html>
