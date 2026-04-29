@@ -9,14 +9,12 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            background: #0f172a;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
             color: white;
             font-size: 18px;
             line-height: 1.7;
         }
-body {
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-}
+
         h1 {
             font-size: 42px;
         }
@@ -36,7 +34,8 @@ body {
         }
 
         nav {
-            background: #020617;
+            background: rgba(2, 6, 23, 0.9);
+            backdrop-filter: blur(10px);
             padding: 10px;
             text-align: center;
             position: sticky;
@@ -49,55 +48,51 @@ body {
             margin: 10px;
             text-decoration: none;
         }
-nav {
-    background: rgba(2, 6, 23, 0.9);
-    backdrop-filter: blur(10px);
-}
+
         section {
             padding: 40px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s forwards;
         }
-section {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 0.8s forwards;
-}
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .card {
-    background: rgba(30, 41, 59, 0.8);
-    backdrop-filter: blur(10px);
-    padding: 25px;
-    margin: 20px auto;
-    max-width: 900px;
-    border-radius: 15px;
-    transition: 0.3s;
-    box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
-}
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            margin: 20px auto;
+            max-width: 900px;
+            border-radius: 15px;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+        }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
-}
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+        }
 
         button {
-    padding: 12px 22px;
-    background: #38bdf8;
-    border: none;
-    color: black;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: 0.3s;
-}
+            padding: 12px 22px;
+            background: #38bdf8;
+            border: none;
+            color: black;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
 
-button:hover {
-    background: #0ea5e9;
-    transform: scale(1.05);
-}
+        button:hover {
+            background: #0ea5e9;
+            transform: scale(1.05);
+        }
 
         input, textarea {
             width: 100%;
@@ -116,31 +111,16 @@ button:hover {
             padding: 20px;
             background: #020617;
         }
+
         @media (max-width: 600px) {
-    h1 {
-        font-size: 32px;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-    section {
-        padding: 20px;
-    }
-
-    .card {
-        margin: 10px;
-    }
-}
+            h1 { font-size: 32px; }
+            h2 { font-size: 24px; }
+            section { padding: 20px; }
+            .card { margin: 10px; }
+        }
     </style>
 </head>
-<section id="profil">
-    <div class="card">
-        <h2>👨‍💻 Profil</h2>
-        <p>Je suis un passionné de développement web. J’apprends à créer des sites modernes avec HTML, CSS et JavaScript et à améliorer mes compétences chaque jour.</p>
-    </div>
-</section>
+
 <body>
 
 <header>
@@ -159,6 +139,15 @@ button:hover {
     <a href="#quiz">Quiz</a>
 </nav>
 
+<!-- PROFIL -->
+<section id="profil">
+    <div class="card">
+        <h2>👨‍💻 Profil</h2>
+        <p>Je suis un passionné de développement web. J’apprends à créer des sites modernes avec HTML, CSS et JavaScript et à améliorer mes compétences chaque jour.</p>
+    </div>
+</section>
+
+<!-- METIER -->
 <section id="metier">
     <div class="card">
         <h2>💻 Le métier</h2>
@@ -166,19 +155,10 @@ button:hover {
     </div>
 </section>
 
+<!-- COMPETENCES -->
 <section id="competences">
     <div class="card">
         <h2>🛠️ Compétences</h2>
-        <section id="projets">
-    <div class="card">
-        <h2>🚀 Projets</h2>
-        <ul>
-            <li>Site DevVision (actuel)</li>
-            <li>Mini portfolio HTML/CSS</li>
-            <li>Projets JavaScript à venir</li>
-        </ul>
-    </div>
-</section>
         <ul>
             <li>Programmation (HTML, CSS, JavaScript...)</li>
             <li>Logique et résolution de problèmes</li>
@@ -188,6 +168,19 @@ button:hover {
     </div>
 </section>
 
+<!-- PROJETS -->
+<section id="projets">
+    <div class="card">
+        <h2>🚀 Projets</h2>
+        <ul>
+            <li>Site DevVision (actuel)</li>
+            <li>Mini portfolio HTML/CSS</li>
+            <li>Projets JavaScript à venir</li>
+        </ul>
+    </div>
+</section>
+
+<!-- IA -->
 <section id="ia">
     <div class="card">
         <h2>🤖 Intelligence Artificielle</h2>
@@ -198,6 +191,7 @@ button:hover {
     </div>
 </section>
 
+<!-- A PROPOS -->
 <section id="apropos">
     <div class="card">
         <h2>👤 À propos</h2>
@@ -205,6 +199,7 @@ button:hover {
     </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
     <div class="card">
         <h2>📩 Contact</h2>
@@ -214,11 +209,11 @@ button:hover {
         <button>Envoyer</button>
     </div>
 </section>
+
+<!-- QUIZ -->
 <section id="quiz">
     <div class="card">
         <h2>🧠 Quiz : Es-tu fait pour être développeur ?</h2>
-
-        <p>Réponds à cette question :</p>
 
         <p><strong>Aimes-tu résoudre des problèmes ?</strong></p>
 
@@ -228,16 +223,12 @@ button:hover {
         <p id="resultat"></p>
     </div>
 </section>
+
 <footer>
     <p>© 2026 DevVision</p>
 </footer>
 
 <script>
-function showMessage() {
-    document.getElementById("message").innerText =
-        "Conseil : Apprends JavaScript, c’est essentiel pour devenir développeur !";
-}
- <script>
 function showMessage() {
     document.getElementById("message").innerText =
         "Conseil : Apprends JavaScript, c’est essentiel pour devenir développeur !";
@@ -252,7 +243,6 @@ function reponse(choix) {
         resultat.innerText = "💡 Pas grave ! La logique s’apprend avec la pratique.";
     }
 }
-</script>   
 </script>
 
 </body>
