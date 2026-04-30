@@ -98,6 +98,28 @@ footer {
     padding: 20px;
     background: #020617;
 }
+    .galerie-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.galerie-item {
+    width: 280px;
+    text-align: center;
+}
+
+.galerie-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.galerie-item img:hover {
+    transform: scale(1.05);
+}
 </style>
 </head>
 
@@ -207,9 +229,26 @@ footer {
 <section id="gallery">
 <div class="card">
 <h2>🖼️ Galerie</h2>
-<p>📷 Image projet 1</p>
-<p>📷 Image projet 2</p>
-<p>📷 Image projet 3</p>
+
+<div class="galerie-container">
+
+  <div class="galerie-item">
+    <img src="images/profil-dev.jpg" alt="Profil développeur">
+    <p>Profil Développeur</p>
+  </div>
+
+  <div class="galerie-item">
+    <img src="images/projet-web.jpg" alt="Projet Web">
+    <p>Projet Web Moderne</p>
+  </div>
+
+  <div class="galerie-item">
+    <img src="images/banniere-cservice.jpg" alt="C-SERVICE">
+    <p>Branding C-SERVICE</p>
+  </div>
+
+</div>
+
 </div>
 </section>
 
